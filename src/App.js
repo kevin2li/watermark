@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Menu, Typography, Breadcrumb } from 'antd';
 import Embed from './views/Embed';
+import Extract from './views/Extract'
 import './App.css';
 const { Header, Footer, Content } = Layout;
 const { Link } = Typography
@@ -18,15 +19,20 @@ class App extends React.Component {
 
   render() {
     var content;
-    content = <Embed></Embed>
-
+    
+    if (this.state.current_tab === '1') {
+      content = <Embed></Embed>
+    } else if (this.state.current_tab === '2') {
+      content = <Extract></Extract>
+    } 
     return (
       <Layout className="layout">
         <Header>
-          <div className="logo">企业版</div>
+          <div className="logo"></div>
+          <div class="name">水印嵌入系统</div>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-            <Menu.Item key="1" onClick={this.switch_nav}><Link >水印嵌入</Link></Menu.Item>
-            <Menu.Item key="2" onClick={this.switch_nav}><Link >水印提取</Link></Menu.Item>
+            <Menu.Item key="1" onClick={this.switch_nav}><Link >嵌入</Link></Menu.Item>
+            <Menu.Item key="2" onClick={this.switch_nav}><Link >提取</Link></Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 50px' }} className="site-layout-background">
