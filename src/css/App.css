@@ -37,6 +37,12 @@
   margin: 16px 24px 16px 0;
   background: rgba(255, 255, 255, 0.2);
 }
+.site-layout .site-layout-background {
+  background: #fff;
+}
+[data-theme="dark"] .site-layout .site-layout-background {
+  background: #141414;
+}
 /* my css */
 
 .logo {
@@ -58,9 +64,28 @@
   font-size: 25px;
 }
 
-.site-layout .site-layout-background {
-  background: #fff;
+.container
+{
+  margin: 10px auto;
+  display: flex;
+  display: -webkit-flex; /* Safari */
 }
-[data-theme="dark"] .site-layout .site-layout-background {
-  background: #141414;
+.item
+{
+  flex:1;
+  height: 80vh;
+  /* border:1px solid black; */
+}
+
+.label{
+  padding-left: 85px;
+  margin: 10px 0 15px 0;
+  font-size: 16px;
+  text-decoration: underline
+}
+.label2{
+  margin: 10px 0 60px 0;
+  font-size: 18px;
+  text-decoration: underline;
+  text-align: center;
 }

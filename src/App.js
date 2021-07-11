@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout, Menu, Typography, Breadcrumb } from 'antd';
 import Embed from './views/Embed';
 import Extract from './views/Extract'
-import './App.css';
+import './css/App.css';
 const { Header, Footer, Content } = Layout;
 const { Link } = Typography
 
@@ -16,7 +16,9 @@ class App extends React.Component {
     }
     this.menuRef = React.createRef();
   }
-
+  switch_nav =  e => {
+    this.setState({ current_tab: e.key })
+  }
   render() {
     var content;
     
