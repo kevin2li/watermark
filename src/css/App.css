@@ -7,14 +7,6 @@
   margin: 16px 24px 16px 0;
   /* background: rgba(255, 255, 255, 0.3); */
 }
-.logo{
-  color: #6092ff;
-  text-align: center;
-  line-height: 31px;
-  font-size: 19px;
-  width: 170px;
-  background: #001529
-}
 
 .ant-row-rtl #components-layout-demo-top-side-2 .logo {
   float: right;
@@ -23,7 +15,6 @@
 
 .site-layout-background {
   background: #fff;
-  min-height: 82vh;
 }
 
 .site-page-header {
@@ -43,13 +34,18 @@
 [data-theme="dark"] .site-layout .site-layout-background {
   background: #141414;
 }
+#components-layout-demo-side .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
 /* my css */
 
 .logo {
   float: left;
   width: 120px;
   height: 31px;
-  margin: 16px 24px 16px 0;
+  margin: 16px 24px 16px 16px;
   background: rgba(255, 255, 255, 0.2);
 }
 .name {
@@ -73,7 +69,7 @@
 .item
 {
   flex:1;
-  height: 78vh;
+  height: 80vh;
   /* border:1px solid black; */
 }
 
