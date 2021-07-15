@@ -12,16 +12,13 @@ import {
   SettingOutlined,
   SearchOutlined,
   QuestionOutlined,
-  BarsOutlined
 } from '@ant-design/icons';
 import './css/App.css';
 import logo from './assets/logo.png'
 import Embed from './views/Embed'
 import Extract from './views/Extract'
 const { Header, Content, Footer, Sider } = Layout;
-const { Search } = Input;
 const { TabPane } = Tabs;
-const { Title } = Typography;
 
 class App extends React.Component {
   state = {
