@@ -12,16 +12,13 @@ import {
   SettingOutlined,
   SearchOutlined,
   QuestionOutlined,
-  BarsOutlined
 } from '@ant-design/icons';
 import './css/App.css';
 import logo from './assets/logo.png'
 import Embed from './views/Embed'
 import Extract from './views/Extract'
 const { Header, Content, Footer, Sider } = Layout;
-const { Search } = Input;
 const { TabPane } = Tabs;
-const { Title } = Typography;
 
 class App extends React.Component {
   state = {
@@ -82,7 +79,7 @@ class App extends React.Component {
         </Sider>
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0, background: "#001529", height: "64px" }}>
-            <div style={{ float: "left", margin:"4px 0 0 12px" }}>
+            <div style={{ float: "left", margin:"4px 0 0 8px" }}>
               <Input size="large" placeholder="搜索..." suffix={<SearchOutlined style={{ fontSize: '22px' }}/>} />
             </div>
             <div style={{ float: "right", color: "white" }}>
@@ -103,7 +100,7 @@ class App extends React.Component {
               <Breadcrumb.Item>首页</Breadcrumb.Item>
               <Breadcrumb.Item>图片水印</Breadcrumb.Item>
             </Breadcrumb>
-            <div className="site-layout-background" style={{ padding: "5px 24px 24px 5px", minHeight: 520, backgroundSize: "100% 100%" }}>
+            <div className="site-layout-background" style={{ padding: "5px 24px 24px 5px", minHeight: 540, backgroundSize: "100% 100%" }}>
               <Tabs onChange={this.callback} type="card" size='large'>
                 <TabPane tab="水印嵌入" key="1" style={{ fontSize: "22px" }}>
                   <Embed />
