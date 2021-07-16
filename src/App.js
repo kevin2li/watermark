@@ -45,17 +45,17 @@ class App extends React.Component {
 
     return (
       <Layout style={{ minHeight: '100vh' }}>
-        <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse} width="240px">
+        <Sider width="240px">
           <div className="logo">
             <img src={logo} style={{ width: "48px", height: "48px", alt: "" }}></img>
             <span style={{ fontFamily: "楷体", fontSize: "34px" }}>版权卫士</span>
           </div>
-          <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" style={{ fontSize: "20px" }}>
+          <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" style={{ fontSize: "20px", background: "", height: "inherit"}}>
             <Menu.Item key="1" icon={<HomeOutlined style={{ fontSize: '24px' }} />}>
               首页
             </Menu.Item>
             <Menu.Item key="2" icon={<FileImageOutlined style={{ fontSize: '24px' }} />}>
-              图片水印
+              图像水印
             </Menu.Item>
             <Menu.Item key="3" icon={<AudioOutlined style={{ fontSize: '24px' }} />}>
               音频水印
@@ -63,14 +63,11 @@ class App extends React.Component {
             <Menu.Item key="4" icon={<VideoCameraOutlined style={{ fontSize: '24px' }} />}>
               视频水印
             </Menu.Item>
-            <Menu.Item key="5" icon={<BlockOutlined style={{ fontSize: '24px' }} />}>
-              区块链水印
-            </Menu.Item>
 
-            <Menu.Item key="6" icon={<QuestionOutlined style={{ fontSize: '24px' }} />} style={{ position: 'absolute', bottom: "100px" }}>
+            <Menu.Item key="5" icon={<QuestionOutlined style={{ fontSize: '24px' }} />} style={{ position: 'absolute', bottom: "95px" }}>
               帮助
             </Menu.Item>
-            <Menu.Item key="7" icon={<UserOutlined style={{ fontSize: '24px' }} />} style={{ position: 'absolute', bottom: "50px" }}>
+            <Menu.Item key="6" icon={<UserOutlined style={{ fontSize: '24px' }} />} style={{ position: 'absolute', bottom: "50px" }}>
               关于我们
             </Menu.Item>
           </Menu>
@@ -98,7 +95,7 @@ class App extends React.Component {
           <Content style={{ margin: '0 16px' }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
               <Breadcrumb.Item>首页</Breadcrumb.Item>
-              <Breadcrumb.Item>图片水印</Breadcrumb.Item>
+              <Breadcrumb.Item>图像水印</Breadcrumb.Item>
             </Breadcrumb>
             <div className="site-layout-background" style={{ padding: "5px 24px 24px 5px", minHeight: 540, backgroundSize: "100% 100%" }}>
               <Tabs onChange={this.callback} type="card" size='large'>

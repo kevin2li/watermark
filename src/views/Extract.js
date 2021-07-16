@@ -41,7 +41,7 @@ class Extract extends React.Component {
                 <Row>
                     <Col span={24}>
                         <div style={{ textAlign: "center" }}>
-                            <Title level={2} >图片水印提取</Title>
+                            <Title level={2} >图像水印提取</Title>
                         </div>
                     </Col>
                 </Row>
@@ -65,7 +65,10 @@ class Extract extends React.Component {
                                 name="wm"
                                 style={{height:"248px"}}
                             >
+                                <div style={{border:"1px solid blue", padding:"10px", width:"360px", height:"250px"}}>
+
                                 <PicturesWall img={origin}></PicturesWall>
+                                </div>
                             </Form.Item>
                             <Form.Item wrapperCol={{ offset: 6, span: 16 }} >
                             
