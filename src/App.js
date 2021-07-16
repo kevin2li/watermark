@@ -50,24 +50,24 @@ class App extends React.Component {
             <img src={logo} style={{ width: "48px", height: "48px", alt: "" }}></img>
             <span style={{ fontFamily: "楷体", fontSize: "34px" }}>版权卫士</span>
           </div>
-          <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" style={{ fontSize: "20px", background: "", height: "inherit"}}>
-            <Menu.Item key="1" icon={<HomeOutlined style={{ fontSize: '24px' }} />}>
+          <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" style={{ fontSize: "20px", background: "#197fce", height: "inherit"}}>
+            <Menu.Item key="1" icon={<HomeOutlined style={{ fontSize: '24px' }} />} style={{color:"black"}}>
               首页
             </Menu.Item>
-            <Menu.Item key="2" icon={<FileImageOutlined style={{ fontSize: '24px' }} />}>
+            <Menu.Item key="2" icon={<FileImageOutlined style={{ fontSize: '24px' }} />} style={{color:"black"}}>
               图像水印
             </Menu.Item>
-            <Menu.Item key="3" icon={<AudioOutlined style={{ fontSize: '24px' }} />}>
+            <Menu.Item key="3" icon={<AudioOutlined style={{ fontSize: '24px' }} />} style={{color:"black"}}>
               音频水印
             </Menu.Item>
-            <Menu.Item key="4" icon={<VideoCameraOutlined style={{ fontSize: '24px' }} />}>
+            <Menu.Item key="4" icon={<VideoCameraOutlined style={{ fontSize: '24px' }} />} style={{color:"black"}}>
               视频水印
             </Menu.Item>
 
-            <Menu.Item key="5" icon={<QuestionOutlined style={{ fontSize: '24px' }} />} style={{ position: 'absolute', bottom: "95px" }}>
+            <Menu.Item key="5" icon={<QuestionOutlined style={{ fontSize: '24px' }} />} style={{ position: 'absolute', bottom: "95px", color:"black" }}>
               帮助
             </Menu.Item>
-            <Menu.Item key="6" icon={<UserOutlined style={{ fontSize: '24px' }} />} style={{ position: 'absolute', bottom: "50px" }}>
+            <Menu.Item key="6" icon={<UserOutlined style={{ fontSize: '24px' }} />} style={{ position: 'absolute', bottom: "50px", color:"black" }}>
               关于我们
             </Menu.Item>
           </Menu>
@@ -75,19 +75,19 @@ class App extends React.Component {
 
         </Sider>
         <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0, background: "#001529", height: "64px" }}>
+          <Header className="site-layout-background" style={{ padding: 0, background: "#197fce", height: "64px" }}>
             <div style={{ float: "left", margin:"4px 0 0 8px" }}>
               <Input size="large" placeholder="搜索..." suffix={<SearchOutlined style={{ fontSize: '22px' }}/>} />
             </div>
             <div style={{ float: "right", color: "white" }}>
-              <Avatar style={{ backgroundColor: '#001529' }} icon={<BellOutlined style={{ fontSize: '22px' }}/>} />
+              <Avatar style={{ backgroundColor: '#197fce' }} icon={<BellOutlined style={{ fontSize: '22px' }}/>} />
               <span style={{width:"13px", display: "inline-block"}}></span>
-              <Avatar style={{ backgroundColor: '#001529' }} icon={<MailOutlined style={{ fontSize: '22px' }}/>} />
+              <Avatar style={{ backgroundColor: '#197fce' }} icon={<MailOutlined style={{ fontSize: '22px' }}/>} />
               <span style={{width:"13px", display: "inline-block"}}></span>
-              <Avatar style={{ backgroundColor: '#001529' }} icon={<UserOutlined style={{ fontSize: '22px' }}/>} />
+              <Avatar style={{ backgroundColor: '#197fce' }} icon={<UserOutlined style={{ fontSize: '22px' }}/>} />
               <span style={{ color: "white", paddingLeft: "1px" }}>访客登录</span>
               <span style={{width:"13px", display: "inline-block"}}></span>
-              <Avatar style={{ backgroundColor: '#001529' }} icon={<SettingOutlined style={{ fontSize: '22px' }}/>} />
+              <Avatar style={{ backgroundColor: '#197fce' }} icon={<SettingOutlined style={{ fontSize: '22px' }}/>} />
               <span style={{width:"13px", display: "inline-block"}}></span>
             </div>
           </Header>
@@ -97,7 +97,7 @@ class App extends React.Component {
               <Breadcrumb.Item>首页</Breadcrumb.Item>
               <Breadcrumb.Item>图像水印</Breadcrumb.Item>
             </Breadcrumb>
-            <div className="site-layout-background" style={{ padding: "5px 24px 24px 5px", minHeight: 540, backgroundSize: "100% 100%" }}>
+            <div className="site-layout-background" style={{ padding: "5px 24px 24px 5px", minHeight: 560, backgroundSize: "100% 100%" }}>
               <Tabs onChange={this.callback} type="card" size='large'>
                 <TabPane tab="水印嵌入" key="1" style={{ fontSize: "22px" }}>
                   <Embed />
