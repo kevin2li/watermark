@@ -43,7 +43,15 @@ class PicturesWall extends React.Component {
     });
   };
 
-  handleChange = ({ fileList }) => this.setState({ fileList });
+  handleChange = ({fileList, status}) => {
+    console.log(fileList)
+    for(let img of fileList) {
+      if(img.status == "error"){
+        img.status = "done"
+      }
+    }
+    this.setState({fileList: fileList})
+  };
 
   render() {
     const { previewVisible, previewImage, fileList, previewTitle } = this.state;

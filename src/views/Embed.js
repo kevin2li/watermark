@@ -11,7 +11,8 @@ class Embed extends React.Component {
         previewVisible: false,
         previewImage: '',
         previewTitle: '',
-        embed: false
+        embed: false,
+        fileList: []
     };
     // 嵌入对话框
     handleCancel = () => this.setState({ previewVisible: false });

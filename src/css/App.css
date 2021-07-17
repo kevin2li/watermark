@@ -29,7 +29,7 @@
   background: rgba(255, 255, 255, 0.2);
 }
 .site-layout .site-layout-background {
-  background: url(https://lib.nuist.edu.cn/img/zybj.jpg)
+  background: url(../assets/bg7.png)
 }
 [data-theme="dark"] .site-layout .site-layout-background {
   background: #141414;
