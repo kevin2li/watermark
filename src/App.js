@@ -1,11 +1,10 @@
 import React from 'react';
-import { Avatar, Layout, Menu, Breadcrumb, Input, Typography, Tabs} from 'antd';
+import { Avatar, Layout, Menu, Breadcrumb, Input, Tabs} from 'antd';
 import {
   HomeOutlined,
   FileImageOutlined,
   AudioOutlined,
   VideoCameraOutlined,
-  BlockOutlined,
   UserOutlined,
   BellOutlined,
   MailOutlined,
@@ -40,8 +39,6 @@ class App extends React.Component {
     console.log('Failed:', errorInfo);
   };
   render() {
-    const { collapsed } = this.state;
-    const onSearch = value => console.log(value);
 
     return (
       <Layout style={{ minHeight: '100vh' }}>

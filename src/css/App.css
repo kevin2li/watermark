@@ -112,8 +112,15 @@
   display: inline-flex;
   align-items: center;
   height: 32px;
-  color: rgba(0, 0, 0, 0.85);
-  font-size: 16px;
+  color: rgba(56, 50, 50, 0.85);
+  font-size: 19px;
   font-family: "微软雅黑";
-  /* font-weight: bold; */
+  font-weight: bold;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #1890ff;
+  text-shadow: 0 0 0.25px currentColor;
+  font-weight: bold;
+  font-size: 19px;
 }

@@ -1,56 +1,19 @@
 import React from "react";
 import { Upload, Modal } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
-function getBase64(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
-  });
-}
+
+
 
 class PicturesWall extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
+    console.log(this.props)
   }
   state = {
     previewVisible: false,
     previewImage: '',
     previewTitle: '',
-    fileList: [
-      {
-        uid: '-1',
-        name: 'image.png',
-        status: 'done',
-        url: this.props.img,
-      },
-    ],
-  };
-
-  handleCancel = () => this.setState({ previewVisible: false });
-
-  handlePreview = async file => {
-    if (!file.url && !file.preview) {
-      file.preview = await getBase64(file.originFileObj);
-    }
-
-    this.setState({
-      previewImage: file.url || file.preview,
-      previewVisible: true,
-      previewTitle: file.name || file.url.substring(file.url.lastIndexOf('/') + 1),
-    });
-  };
-
-  handleChange = ({fileList, status}) => {
-    console.log(fileList)
-    for(let img of fileList) {
-      if(img.status == "error"){
-        img.status = "done"
-      }
-    }
-    this.setState({fileList: fileList})
   };
 
   render() {
@@ -66,17 +29,17 @@ class PicturesWall extends React.Component {
         <Upload
           action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
           listType="picture-card"
-          fileList={fileList}
-          onPreview={this.handlePreview}
-          onChange={this.handleChange}
+          fileList={this.props.fileList}
+          onPreview={this.props.handlePreview}
+          onChange={this.props.handleChange}
         >
-          {uploadButton}
+          {this.props.uploadButton?uploadButton:null}
         </Upload>
         <Modal
           visible={previewVisible}
           title={previewTitle}
           footer={null}
-          onCancel={this.handleCancel}
+          onCancel={this.props.handleCancel}
         >
           <img alt="example" style={{ width: '100%' }} src={previewImage} />
         </Modal>
